@@ -1,3 +1,7 @@
+/**
+ * @author Alexander Arvidsson <alexander@arvidson.com>
+ */
+
 const createOdometer = {};
 const ODOMETER_COUNT = 20;
 
@@ -31,13 +35,16 @@ for (const element of document.getElementsByClassName("odometer")) {
     const spinner = document.createElement("div");
     spinner.className = "odometer-spinner";
     spinner.style["transform"] = "translateY(0)";
+    container.appendChild(spinner);
+
+    // Animate spinner to correct place next frame
     setTimeout(() => {
       spinner.style["transform"] = `translateY(${
         (index / ODOMETER_COUNT) * -100
       }%)`;
     }, 0);
-    container.appendChild(spinner);
 
+    // Create spinner numbers
     Array(ODOMETER_COUNT)
       .fill("")
       .forEach((_, i) => {
@@ -50,6 +57,7 @@ for (const element of document.getElementsByClassName("odometer")) {
     element.appendChild(container);
   });
 
+  // Fade in suffix if we have one
   if (suffix) {
     const text = document.createElement("span");
     text.className = "odometer-span";

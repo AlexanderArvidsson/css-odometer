@@ -1,3 +1,12 @@
+.odometer {
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.odometer.odometer--initialized {
+  opacity: 1;
+}
+
 .odometer-number {
   overflow: hidden;
   display: inline-block;

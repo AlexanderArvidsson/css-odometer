@@ -33,4 +33,10 @@
   transition: transform 1s ease-out;
   top: 0;
   left: 0;
+  right: 0;
+}
+
+
+.odometer-number .odometer-spinner div {
+  text-align: center;
 }

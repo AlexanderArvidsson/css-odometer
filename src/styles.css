@@ -17,6 +17,7 @@
 .odometer-span {
   transition: opacity 0.5s;
   opacity: 0;
+  vertical-align: middle;
 }
 
 .odometer-span.odometer-span--visible {

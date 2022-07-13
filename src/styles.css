@@ -1,0 +1,26 @@
+.odometer-number {
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+.odometer-span {
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+.odometer-span.odometer-span--visible {
+  opacity: 1;
+}
+
+.odometer-number .odometer-spacer {
+  visibility: hidden;
+}
+
+.odometer-number .odometer-spinner {
+  position: absolute;
+  transition: transform 1s;
+  top: 0;
+  left: 0;
+}

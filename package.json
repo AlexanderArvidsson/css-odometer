@@ -1,16 +1,29 @@
 {
   "name": "js-simple-odometer",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "author": {
-    "name" : "Alexander Arvidsson",
-    "email" : "alexander@arvidson.nu"
+    "name": "Alexander Arvidsson",
+    "email": "alexander@arvidson.nu"
   },
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "parcel src/index.html --target app",
+    "build": "parcel build src/index.html --target app",
+    "serve": "parcel serve src/index.html --target app"
   },
   "devDependencies": {
     "parcel": "^2.6.2"
+  },
+  "dependencies": {},
+  "targets": {
+    "app": {
+      "engines": {
+        "browsers": [
+          "defaults",
+          "IE 11",
+          "maintained node versions"
+        ]
+      }
+    }
   }
 }

@@ -2,11 +2,13 @@
  * @author Alexander Arvidsson <alexander@arvidson.com>
  */
 
+"use strict";
+
 (function () {
   const ODOMETER_COUNT = 20;
 
   const createOdometer = (element) => {
-    if (element.classList.contains("odometer--initialized")) return;
+    if (element.className.indexOf("odometer--initialized") >= 0) return;
 
     const number = element.innerHTML;
 
@@ -90,5 +92,7 @@
     }
   );
 
-  elements.forEach((el) => observer.observe(el));
+  for (let el of elements) {
+    observer.observe(el);
+  }
 })();
